@@ -1,0 +1,10 @@
+C:\Users\thiag\source\repos\ESTUDOS-CRUD\crud01\crud03\bin\Debug\crud03.exe.config
+C:\Users\thiag\source\repos\ESTUDOS-CRUD\crud01\crud03\bin\Debug\crud03.exe
+C:\Users\thiag\source\repos\ESTUDOS-CRUD\crud01\crud03\bin\Debug\crud03.pdb
+C:\Users\thiag\source\repos\ESTUDOS-CRUD\crud01\crud03\obj\Debug\crud03.csprojAssemblyReference.cache
+C:\Users\thiag\source\repos\ESTUDOS-CRUD\crud01\crud03\obj\Debug\crud03.Form1.resources
+C:\Users\thiag\source\repos\ESTUDOS-CRUD\crud01\crud03\obj\Debug\crud03.Properties.Resources.resources
+C:\Users\thiag\source\repos\ESTUDOS-CRUD\crud01\crud03\obj\Debug\crud03.csproj.GenerateResource.cache
+C:\Users\thiag\source\repos\ESTUDOS-CRUD\crud01\crud03\obj\Debug\crud03.csproj.CoreCompileInputs.cache
+C:\Users\thiag\source\repos\ESTUDOS-CRUD\crud01\crud03\obj\Debug\crud03.exe
+C:\Users\thiag\source\repos\ESTUDOS-CRUD\crud01\crud03\obj\Debug\crud03.pdb
