@@ -13,6 +13,7 @@ namespace crud03
 {
     public partial class Form1 : Form
     {
+
         SqlConnection conn = new SqlConnection("Server=desktop-easat3o\\sqlexpress;Database=crud03;User Id=sa;Password=bwy6932guz");
         SqlCommand comando = new SqlCommand();
         SqlDataAdapter dataAdapter;
@@ -33,7 +34,7 @@ namespace crud03
         {
             //inserir dados o banco
             conn.Open();
-            SqlCommand comando = new SqlCommand( "insert into aluno(nome, idade, curso) values('" + txtNome.Text + "','" + txtIdade.Text + "','" + txtcurso.Text + "')", conn );
+            comando = new SqlCommand( "insert into aluno(nome, idade, curso) values('" + txtNome.Text + "','" + txtIdade.Text + "','" + txtcurso.Text + "')", conn );
             comando.ExecuteNonQuery();
             LimparCampos();
             ListarTudo();
