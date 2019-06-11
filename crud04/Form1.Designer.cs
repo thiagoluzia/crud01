@@ -124,6 +124,8 @@
             this.dgClientes.Name = "dgClientes";
             this.dgClientes.Size = new System.Drawing.Size(451, 204);
             this.dgClientes.TabIndex = 9;
+            this.dgClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellContentClick);
+            this.dgClientes.SelectionChanged += new System.EventHandler(this.dgClientes_SelectionChanged);
             // 
             // btnExcluir
             // 

@@ -72,5 +72,15 @@ namespace crud04
             CadastarCliente();
             LimpaCampos();
         }
+
+        private void dgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgClientes_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
