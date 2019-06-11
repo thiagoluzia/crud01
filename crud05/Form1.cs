@@ -59,7 +59,7 @@ namespace crud05
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if(txtNome.Text != "" && txtEndereco.Text != "" && txtCelular.Text != "" && txtTelefone.Text != "" && txtEmail.Text != "")
+            if (txtNome.Text != "" && txtEndereco.Text != "" && txtCelular.Text != "" && txtTelefone.Text != "" && txtEmail.Text != "")
             {
                 try
                 {
@@ -100,6 +100,7 @@ namespace crud05
                     con.Open();
                     cmd.Parameters.AddWithValue("@id", ID);
                     cmd.Parameters.AddWithValue("@nome", txtNome.Text.ToUpper());
+                    cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@celular", txtCelular.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text.ToLower());
@@ -124,9 +125,52 @@ namespace crud05
             }
         }
 
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (ID != 0)
+            {
+                if (MessageBox.Show("Deseja deletar esse registro?", "Agenda", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        cmd = new SqlCommand("DELETE Contatos WHERE id = @id", con);
+                        con.Open();
+                        cmd.Parameters.AddWithValue("@id", ID);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Registro Deletado com sucessso!");
+
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show("Erro: " + exc.Message);
+                        throw;
+                    }
+                    finally
+                    {
+                        con.Close();
+                        ExibirDados();
+                        LimparDados();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um registro para deletar");
+            }
+        }
         private void dgvAgenda_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            ID = Convert.ToInt32(dgvAgenda.Rows[e.RowIndex].Cells[0].Value.ToString());
+            txtNome.Text = dgvAgenda.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtEndereco.Text = dgvAgenda.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtCelular.Text = dgvAgenda.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtTelefone.Text = dgvAgenda.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtEmail.Text = dgvAgenda.Rows[e.RowIndex].Cells[5].Value.ToString();
+        }
 
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

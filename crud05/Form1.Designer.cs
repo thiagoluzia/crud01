@@ -176,6 +176,7 @@
             this.btnDeletar.TabIndex = 14;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnSair
             // 
@@ -185,6 +186,7 @@
             this.btnSair.TabIndex = 15;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // dgvAgenda
             // 
